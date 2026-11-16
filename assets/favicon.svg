@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Medit USA LTD">
+  <rect width="64" height="64" rx="14" fill="#123C4A"/>
+  <path d="M14 46V18h7.2l10.8 18.6L42.8 18H50v28h-6.4V27.2L33.2 46h-2.4L20.4 27.2V46H14z" fill="#F7F5F0"/>
+  <rect x="14" y="50" width="36" height="3" rx="1.5" fill="#C4A35A"/>
+</svg>
