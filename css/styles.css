@@ -700,3 +700,7 @@ section {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+.contact-phone { margin-top: 1.25rem; font-size: 1.1rem; }
+.contact-phone a { color: inherit; text-decoration: none; }
+.contact-phone a:hover { text-decoration: underline; }
