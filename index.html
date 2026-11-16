@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!--
+  Photo credits (Unsplash License: free for commercial use, no attribution required):
+  images/hero-office.webp       https://images.unsplash.com/photo-1497215728101-856f4ea42174
+  images/technology-team.webp   https://images.unsplash.com/photo-1531482615713-2afd69097998
+  images/medical-supplies.webp  https://images.unsplash.com/photo-1603398938378-e54eab446dde
+  images/transport-truck.webp    https://images.unsplash.com/photo-1592838064575-70ed626d3a0e (truck badge and plate softened)
+  images/approach-city.webp     https://images.unsplash.com/photo-1486406146926-c627a92ad1ab
+  images/contact-office.webp    https://images.unsplash.com/photo-1524758631624-e2822e304c36
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -17,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero-office.webp" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -55,6 +65,7 @@
 
   <main id="main">
     <section class="hero" id="top">
+      <div class="section-bg" aria-hidden="true"><img src="images/hero-office.webp" alt="" fetchpriority="high" decoding="async"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow reveal">Technology &middot; Medical supplies &middot; Transportation</p>
@@ -94,54 +105,68 @@
           <h2 class="reveal" style="--d:80ms">What we do</h2>
           <p class="section-lead reveal" style="--d:160ms">Three lines of business, each run by the same principles and accountable to the same people.</p>
         </div>
-
-        <div class="service-grid">
-          <article class="glass service reveal">
-            <div class="service-top">
-              <span class="icon"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></span>
-              <span class="num">01</span>
-            </div>
-            <h3>Technology</h3>
-            <p>We design, build and run software for everyday needs: mobile applications, web platforms and the systems behind them.</p>
-            <ul>
-              <li>Mobile applications</li>
-              <li>Web platforms and dashboards</li>
-              <li>Payment and data integrations</li>
-            </ul>
-          </article>
-
-          <article class="glass service reveal" style="--d:100ms">
-            <div class="service-top">
-              <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span>
-              <span class="num">02</span>
-            </div>
-            <h3>Medical supplies</h3>
-            <p>We source and trade medical equipment, consumables and healthcare products for hospitals, clinics, pharmacies and other providers.</p>
-            <ul>
-              <li>Medical equipment</li>
-              <li>Clinical consumables</li>
-              <li>Healthcare products</li>
-            </ul>
-          </article>
-
-          <article class="glass service reveal" style="--d:200ms">
-            <div class="service-top">
-              <span class="icon"><svg viewBox="0 0 24 24"><path d="M2.5 16V7.5h11V16M13.5 10.5h4l3.5 3.5v2h-7.5"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span>
-              <span class="num">03</span>
-            </div>
-            <h3>Transportation</h3>
-            <p>We move goods and people safely and on schedule, and handle logistics for our own supply chain and for outside clients.</p>
-            <ul>
-              <li>Goods delivery</li>
-              <li>Passenger transport</li>
-              <li>Supply-chain logistics</li>
-            </ul>
-          </article>
-        </div>
       </div>
     </section>
 
-    <section class="approach" id="approach">
+    <section class="business has-bg align-left" aria-labelledby="biz-01">
+      <div class="section-bg"><img src="images/technology-team.webp" alt="Two colleagues reviewing code on a laptop in a bright office" loading="lazy" decoding="async"></div>
+      <div class="wrap">
+        <article class="glass service reveal">
+          <div class="service-top">
+            <span class="icon"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></span>
+            <span class="num">01 / 03</span>
+          </div>
+          <h3 id="biz-01">Technology</h3>
+          <p>We design, build and run software for everyday needs: mobile applications, web platforms and the systems behind them.</p>
+          <ul>
+              <li>Mobile applications</li>
+              <li>Web platforms and dashboards</li>
+              <li>Payment and data integrations</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="business has-bg align-right" aria-labelledby="biz-02">
+      <div class="section-bg"><img src="images/medical-supplies.webp" alt="A stethoscope and packaged medicines on a light surface" loading="lazy" decoding="async"></div>
+      <div class="wrap">
+        <article class="glass service reveal">
+          <div class="service-top">
+            <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span>
+            <span class="num">02 / 03</span>
+          </div>
+          <h3 id="biz-02">Medical supplies</h3>
+          <p>We source and trade medical equipment, consumables and healthcare products for hospitals, clinics, pharmacies and other providers.</p>
+          <ul>
+              <li>Medical equipment</li>
+              <li>Clinical consumables</li>
+              <li>Healthcare products</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="business has-bg align-left" aria-labelledby="biz-03">
+      <div class="section-bg"><img src="images/transport-truck.webp" alt="A freight truck parked under an open evening sky" loading="lazy" decoding="async"></div>
+      <div class="wrap">
+        <article class="glass service reveal">
+          <div class="service-top">
+            <span class="icon"><svg viewBox="0 0 24 24"><path d="M2.5 16V7.5h11V16M13.5 10.5h4l3.5 3.5v2h-7.5"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span>
+            <span class="num">03 / 03</span>
+          </div>
+          <h3 id="biz-03">Transportation</h3>
+          <p>We move goods and people safely and on schedule, and handle logistics for our own supply chain and for outside clients.</p>
+          <ul>
+              <li>Goods delivery</li>
+              <li>Passenger transport</li>
+              <li>Supply-chain logistics</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach has-bg" id="approach">
+      <div class="section-bg" aria-hidden="true"><img src="images/approach-city.webp" alt="" loading="lazy" decoding="async"></div>
       <div class="wrap approach-grid">
         <div class="approach-intro">
           <p class="eyebrow reveal">Our approach</p>
@@ -182,7 +207,8 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact has-bg" id="contact">
+      <div class="section-bg" aria-hidden="true"><img src="images/contact-office.webp" alt="" loading="lazy" decoding="async"></div>
       <div class="wrap">
         <div class="glass contact-panel reveal">
           <div class="contact-info">

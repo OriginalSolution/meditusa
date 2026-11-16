@@ -53,6 +53,39 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
+
+  // Photo backgrounds: slow zoom when in view + light parallax
+  var bgSections = document.querySelectorAll(".has-bg");
+  if (!reduce && "IntersectionObserver" in window) {
+    var visible = new Set();
+    var bio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in-view"); visible.add(e.target); }
+        else visible.delete(e.target);
+      });
+      tick();
+    }, { threshold: 0.05 });
+    bgSections.forEach(function (s) { bio.observe(s); });
+    var ticking = false;
+    function tick() {
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(function () {
+        var vh = window.innerHeight;
+        visible.forEach(function (s) {
+          var r = s.getBoundingClientRect();
+          var progress = (r.top + r.height / 2 - vh / 2) / (vh + r.height);
+          var img = s.querySelector(".section-bg img");
+          if (img) img.style.setProperty("--py", (progress * -30).toFixed(1) + "px");
+        });
+        ticking = false;
+      });
+    }
+    window.addEventListener("scroll", tick, { passive: true });
+    window.addEventListener("resize", tick);
+  } else {
+    bgSections.forEach(function (s) { s.classList.add("in-view"); });
+  }
+
   // Contact form -> visitor's email app
   if (form) {
     form.addEventListener("submit", function (e) {
