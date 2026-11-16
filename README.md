@@ -4,7 +4,7 @@ Static website for Medit USA LTD, served by GitHub Pages at https://meditusaltd.
 
 Plain HTML, CSS and JavaScript — no build step. Open `index.html` or serve the folder with any static server.
 
-Contact email (`info@meditusaltd.com`) is set in `index.html` and in `js/main.js` (`CONTACT_EMAIL`).
+Contact email (`meditusa2023@gmail.com`) is set in `index.html` and in `js/main.js` (`CONTACT_EMAIL`).
 
 ## Photo credits
 

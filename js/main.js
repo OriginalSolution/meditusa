@@ -1,7 +1,7 @@
 (function () {
   document.documentElement.classList.add("js");
 
-  var CONTACT_EMAIL = "info@meditusaltd.com";
+  var CONTACT_EMAIL = "meditusa2023@gmail.com";
   var header = document.getElementById("site-header");
   var toggle = document.querySelector(".nav-toggle");
   var navLinks = document.querySelectorAll(".nav-links a");
